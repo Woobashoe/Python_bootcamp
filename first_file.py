@@ -1,3 +1,6 @@
+
+import math
+
 print("Hello!")
 print("GODDAGELLE")
 
@@ -87,15 +90,59 @@ greet()
 
 
 
+def vol(rad):
+    return 4*math.pi*rad**3/3
+
+print(vol(3))
+
+def ran_check(num,low,high):
+    if low<num<high:
+        return print("Det är i spannet")
+    else:
+        return print("NEJ!")
+
+ran_check(4,1,4)
+
+def ran_bool(num,low,high):
+    return low<num<high
+
+print(ran_bool(3,1,6))
+
+
+strang= "HHHHeeeeLLLLsss"
 
 
 
 
+def up_low(s):
+    x = 0
+    y = 0
+    for c in s:
+        if c == c.lower():
+            x=x+1
+        else:
+            y=y+1
+    return print(f"Number of uppercase = {y}, number of lowercase = {x}")
 
 
+up_low(strang)
 
+lest=["e","e","d","e","t"]
 
+def unique_list(l):
+    return print(list(set(l)))
 
+unique_list(lest)
 
+numse= [-1,22,10]
 
+def multiply(numbs):
+    total=1
+    for num in numbs:
+        total*=num
+    return print(total)
 
+multiply(numse)
+
+def palindrome(s):
+    return print(s==s[::-1])
